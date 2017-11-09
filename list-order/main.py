@@ -10,7 +10,8 @@ print("carros ordenados por año por default:")
 print(hangar.cars)
 
 print("---")
-print("Ahora orden por marca:")
-print(hangar.cars_order_marca())
+print("Ahora orden por marca y luego modelo:")
+cars_ord = sorted(hangar.cars_order_marca(), key=lambda x: x.modelo, reverse=False)
+print(cars_ord)
 
 

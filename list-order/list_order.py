@@ -7,12 +7,15 @@ class CarHangar:
     def cars_order_marca(self):
         cars2 = sorted(self.cars, key=lambda x: x.marca, reverse=False)
         return cars2
+    def cars_order_modelo(self):
+        cars2 = sorted(self.cars, key=lambda x: x.modelo, reverso=False)
+        return cars2
     
 def generate_car_list():
     cars = []
     cars.append(Car("chevrolet","sail",2013))
     cars.append(Car("audi","m3",1998))
-    cars.append(Car("hyundai","",2003))
+    cars.append(Car("hyundai","accent",2003))
     cars.append(Car("kia","rio",2010))
     cars.append(Car("kia","sportage",2017))
     return cars
