@@ -5,6 +5,10 @@ class VelocidadConverter:
     unidad_salida = "mi/h"
     unidades_posibles = ("mi/h","km/h") # tuple de unidades posibles
     
+    def __init__(self):
+        self.unidad_salida = "mi/h"
+        self.unidades_posibles = ("mi/h","km/h")
+    
     def convert(self, valor, unidad):
         mult = 1.61
         if unidad==self.unidad_salida:
