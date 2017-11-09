@@ -1,15 +1,19 @@
 
 class CarHangar:
     cars = []
+    pilotos = [] # nombres de pilotos
     def __init__(self, car_list):
+        self.pilotos = []
         self.cars = car_list
         self.cars.sort(key=lambda x: x.anio, reverse=True)
     def cars_order_marca(self):
         cars2 = sorted(self.cars, key=lambda x: x.marca, reverse=False)
         return cars2
     def cars_order_modelo(self):
-        cars2 = sorted(self.cars, key=lambda x: x.modelo, reverso=False)
+        cars2 = sorted(self.cars, key=lambda x: x.modelo, reverse=False)
         return cars2
+    def pilotos_order(self):
+        return sorted(self.pilotos)
     
 def generate_car_list():
     cars = []
@@ -33,4 +37,11 @@ class Car:
     def __repr__(self):
         return "Car() marca: " + self.marca + ", modelo: " + self.modelo + ", año: " + str(self.anio)
         
-        
+def gen_pilotos_list():
+    pls = ["Manuel", "Alvaro", "Fernando", "Oscar", "Fabricio", "Diego", "Oswaldo", "Ana"]
+    return pls
+    
+    
+    
+    
+    

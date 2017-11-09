@@ -4,6 +4,7 @@ print("carros sin ordenar:")
 print(generate_car_list())
 
 hangar = CarHangar(generate_car_list())
+hangar.pilotos = gen_pilotos_list()
 
 print("---")
 print("carros ordenados por año por default:")
@@ -14,4 +15,7 @@ print("Ahora orden por marca y luego modelo:")
 cars_ord = sorted(hangar.cars_order_marca(), key=lambda x: x.modelo, reverse=False)
 print(cars_ord)
 
+print("---")
+print("Pilotos por orden alfabetico:")
+print(hangar.pilotos_order())
 
