@@ -6,12 +6,15 @@ print(generate_car_list())
 hangar = HangarOmega(generate_car_list())
 hangar.pilotos = gen_pilotos_list()
 
-print("diferencia con y2k")
-print(hangar.maplist_y2kdiff())
-print("promedio de anios:")
-print(hangar.year_promd())
+# print("diferencia con y2k")
+# print(hangar.maplist_y2kdiff())
+# print("promedio de anios:")
+# print(hangar.year_promd())
 print("filtro marca kia:")
-print(hangar.filter_cars("kia"))
+print(filter_cars_lcomp(hangar,"kia"))
+
+print("entre anios 2000 y 2017:")
+print(filter_cars_anios(hangar, 2000, 2017))
 
 
 # print("---")

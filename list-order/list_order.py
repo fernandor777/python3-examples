@@ -1,5 +1,5 @@
 from functools import reduce
-    
+
 class CarHangar:
     cars = []
     pilotos = [] # nombres de pilotos
@@ -24,10 +24,21 @@ class HangarOmega(CarHangar):
     def __init__(self, car_list):
         super().__init__(car_list)
     def maplist_y2kdiff(self):
+        return list(self.__gen_maplist_y2kdiff())
+    def __gen_maplist_y2kdiff(self):
+        for c in self.cars:
+            yield 2000-c.anio
+    def maplist_y2kdiff_map(self):
         return list(map(lambda x: 2000-x.anio, self.cars))
     def year_promd(self):
         return (reduce(lambda x, y: x+y.anio, self.cars, 0))/len(self.cars)
+    def __filter_cars_gen(self, marca):
+        for c in self.cars:
+            if c.marca==marca:
+                yield c
     def filter_cars(self, marca):
+        return list(self.__filter_cars_gen(marca))
+    def filter_cars_filter(self, marca):
         return list(filter(lambda x: x.marca==marca, self.cars))
     
 def generate_car_list():
@@ -58,6 +69,16 @@ class Car:
 def gen_pilotos_list():
     pls = ["Manuel", "Alvaro", "Fernando", "Oscar", "Fabricio", "Diego", "Oswaldo", "Ana"]
     return pls
+    
+def filter_cars_lcomp(hangar, marca):
+    res = [x for x in hangar.cars if x.marca==marca]
+    return res
+    
+def filter_cars_anios(hangar, anio_desde, anio_hasta):
+    res = [x for x in hangar.cars if x.anio>=anio_desde and x.anio<=anio_hasta]
+    return res
+    
+    
     
     
     
