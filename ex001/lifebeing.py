@@ -11,7 +11,7 @@ class Human(LifeBeing):
         super().__init__(age)
         self.name = name
         self.birthyear = calculate_birth_year(age)
-    def calculate_birth_year(age):
+    def calculate_birth_year(self, age):
         now = datetime.datetime.now()
         curryear = now.year
         byear = curryear - age
@@ -26,7 +26,7 @@ class Age100App:
         self.iname = None
         self.iage = None
         self.human = None
-    def run():
+    def run(self):
         self.iname = input("Enter name:")
         self.iage = input("Enter age:")
         human = makehuman(self.iname, self.iage)
