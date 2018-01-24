@@ -10,7 +10,7 @@ class Human(LifeBeing):
     def __init__(self, name, age):
         super().__init__(age)
         self.name = name
-        self.birthyear = calculate_birth_year(age)
+        self.birthyear = self.calculate_birth_year(age)
     def calculate_birth_year(self, age):
         now = datetime.datetime.now()
         curryear = now.year
