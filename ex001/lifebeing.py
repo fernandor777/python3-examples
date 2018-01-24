@@ -15,7 +15,7 @@ class Human(LifeBeing):
         return self._age
     @age.setter
     def age(self, value):
-        self.age = value
+        self._age = value
         self.birthyear = self.calculate_birth_year(value)
     def calculate_birth_year(self, age):
         now = datetime.datetime.now()
