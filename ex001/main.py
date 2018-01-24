@@ -1,4 +1,4 @@
 import lifebeing
 
-makeapp().run()
+lifebeing.makeapp().run()
 
