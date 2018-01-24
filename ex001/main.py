@@ -1,0 +1,4 @@
+import lifebeing
+
+makeapp().run()
+
