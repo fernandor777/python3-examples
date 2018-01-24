@@ -10,12 +10,20 @@ class Human(LifeBeing):
     def __init__(self, name, age):
         super().__init__(age)
         self.name = name
-        self.birthyear = self.calculate_birth_year(age)
+    @property
+    def age(self):
+        return self._age
+    @age.setter
+    def age(self, value):
+        self.age = value
+        self.birthyear = self.calculate_birth_year(value)
     def calculate_birth_year(self, age):
         now = datetime.datetime.now()
         curryear = now.year
         byear = curryear - age
         return byear
+    
+    
         
 def makehuman(name, age):
     return Human(name, age)
