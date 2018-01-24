@@ -2,12 +2,12 @@ import datetime
 
 class LifeBeing:
     ''' LifeBeing '''
-    def __init__(age):
+    def __init__(self, age):
         self.age = age
     
 
 class Human(LifeBeing):
-    def __init__(name, age):
+    def __init__(self, name, age):
         super().__init__(age)
         self.name = name
         self.birthyear = calculate_birth_year(age)
@@ -22,7 +22,7 @@ def makehuman(name, age):
     
         
 class Age100App:
-    def __init__():
+    def __init__(self):
         self.iname = None
         self.iage = None
         self.human = None
