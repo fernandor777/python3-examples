@@ -4,7 +4,7 @@ import datetime
 
 class HumanTest(TestCase):
     def setUp(self):
-        self.human = Human("Fer", 36)
+        self.human = lifebeing.Human("Fer", 36)
         
     def test_birthage(self):
         ba = datetime.datetime.now().year - 36
