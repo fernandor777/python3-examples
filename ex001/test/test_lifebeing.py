@@ -9,6 +9,6 @@ class HumanTest(TestCase):
     def test_birthage(self):
         ba = datetime.datetime.now().year - 36
         human = lifebeing.Human("Fer", 36)
-        self.assertEqual(ba.human.birthyear)
+        self.assertEqual(ba,human.birthyear)
     
 
