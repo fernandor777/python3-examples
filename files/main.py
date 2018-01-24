@@ -1,6 +1,6 @@
 import fmcsv
 import time
 
-fmcsv.save_json("/home/prods-"+str(time.time())+".json")
+fmcsv.save_json("prods-"+str(time.time())+".json")
 
 
