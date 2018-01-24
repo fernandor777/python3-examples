@@ -28,7 +28,7 @@ class Age100App:
         self.human = None
     def run(self):
         self.iname = input("Enter name:")
-        self.iage = input("Enter age:")
+        self.iage = int(input("Enter age:"))
         human = makehuman(self.iname, self.iage)
         print("You will have 100 years in : ", human.birthyear+100)
         
